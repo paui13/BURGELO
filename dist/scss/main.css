@@ -273,8 +273,8 @@ body {
   position: absolute;
   top: 300rem;
   z-index: -1;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -314,105 +314,6 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-}
-
-.promo {
-  margin-left: 10rem;
-  padding: 2rem;
-}
-
-@media screen and (min-width: 480px) {
-  .promo__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.promo .promoContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-}
-
-.promo .promoContent .promoImage img {
-  height: 80%;
-  width: 80%;
-}
-
-.promo .promoContent .promo__text {
-  max-width: 50rem;
-}
-
-.promo .promoContent .promo__text .promo__stars {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.promo .promoContent .promo__text .promo__stars .star i {
-  font-size: 1rem;
-  color: gold;
-  margin-bottom: 3rem;
-}
-
-.promo .promoContent .promo__text h2 {
-  font-size: 5rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-.promo .promoContent .promo__text p {
-  font-size: 1.5rem;
-  color: #666;
-  line-height: 1.5;
-  margin-bottom: 4rem;
-  max-width: 45rem;
-  font-weight: 300;
-  letter-spacing: 0.1rem;
-}
-
-.promo .promoContent .promo__text .promo__icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8.6rem;
-}
-
-.promo .promoContent .promo__text .promo__icons .promo__icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
-.promo .promoContent .promo__text .promo__icons .promo__icon i {
-  margin-bottom: 0.5rem;
-  font-size: 3.5rem;
-}
-
-.promo .promoContent .promo__text .promo__icons .promo__icon span {
-  font-size: 1.5rem;
-  color: #333;
 }
 
 .product__wrapper {
@@ -548,6 +449,91 @@ body {
   margin-top: 2rem;
 }
 
+.promo {
+  margin-left: 10rem;
+  padding: 2rem;
+}
+
+.promo .promoContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.promo .promoContent .promoImage img {
+  height: 80%;
+  width: 80%;
+}
+
+.promo .promoContent .promo__text {
+  max-width: 50rem;
+}
+
+.promo .promoContent .promo__text .promo__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.promo .promoContent .promo__text .promo__stars .star i {
+  font-size: 1rem;
+  color: gold;
+  margin-bottom: 3rem;
+}
+
+.promo .promoContent .promo__text h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.promo .promoContent .promo__text p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 4rem;
+  max-width: 45rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.promo .promoContent .promo__text .promo__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8.6rem;
+}
+
+.promo .promoContent .promo__text .promo__icons .promo__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.promo .promoContent .promo__text .promo__icons .promo__icon i {
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+}
+
+.promo .promoContent .promo__text .promo__icons .promo__icon span {
+  font-size: 1.5rem;
+  color: #333;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -567,6 +553,10 @@ body {
 }
 
 .header .branding h3 {
+  display: none;
+}
+
+.header .branding i {
   display: none;
 }
 

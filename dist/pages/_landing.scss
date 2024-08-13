@@ -48,7 +48,6 @@
 
     @include mediaQuery($break-md){
         padding-top: 18rem;
-       
     }
   
 
@@ -155,7 +154,7 @@
             position: absolute;
             top: 300rem;
             z-index: -1;
-            transition:  all 0.3s ease-in-out;
+            transition:  all 0.3s ease-out;
             flex-direction: column;
             gap: 2rem;
             justify-content: center;
@@ -179,7 +178,79 @@
 }
 
 
-// PROMO
+// PRODUCTS
+.product {
+    &__wrapper {
+       
+        @include gridUneven(1fr);
+        gap: 3rem;
+        @include mediaQuery($break-md){
+            @include centerAll;
+        }
+    }
+    .product__item {
+        
+        @include mediaQuery($break-md){
+            @include centerAll;
+            max-width: 35rem;
+            &:first-child {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            &:last-child {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &--img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                width: 40rem;
+                @include mediaQuery($break-md){
+                width: 35rem;
+                }
+            }
+        }
+        &--text {
+            @include mediaQuery($break-md){
+               max-width: 30rem;
+            }
+            p {
+                font-size: 20px;
+                &:nth-of-type(2) {
+                    color: gray;
+                    font-weight: 300;
+                    font-size: 18px;
+                }
+            }
+            span {
+                color: $clr-primary;
+                font-size: 36px;
+            }
+            small {
+                color: $clr-primary;
+                font-size: 20px; 
+            }
+            h3 {
+                font-size: 5rem;
+                font-weight: 400;
+            }
+            h2 {
+                font-size: 6rem;
+                font-weight: 400;
+            }
+            a {
+                font-size: 2rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
 
 
 // PROMO
@@ -187,9 +258,6 @@
     margin-left: 10rem;
     padding: 2rem; 
     &__wrapper{
-        @include mediaQuery($break-sm){
-            @include centerAll
-        }
     }
     .promoContent {
       display: flex;  
@@ -270,75 +338,3 @@
   }
   
 
-
-// PRODUCTS
-.product {
-    &__wrapper {
-        @include gridUneven(1fr);
-        gap: 3rem;
-        @include mediaQuery($break-md){
-            @include centerAll;
-        }
-    }
-    .product__item {
-        @include mediaQuery($break-md){
-            @include centerAll;
-            max-width: 35rem;
-            &:first-child {
-                display: flex;
-                flex-direction: column-reverse;
-            }
-            &:last-child {
-                display: flex;
-                flex-direction: column-reverse;
-            }
-        }
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        &--img {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            img {
-                width: 40rem;
-                @include mediaQuery($break-md){
-                width: 35rem;
-                }
-            }
-        }
-        &--text {
-            @include mediaQuery($break-md){
-               max-width: 30rem;
-            }
-            p {
-                font-size: 20px;
-                &:nth-of-type(2) {
-                    color: gray;
-                    font-weight: 300;
-                    font-size: 18px;
-                }
-            }
-            span {
-                color: $clr-primary;
-                font-size: 36px;
-            }
-            small {
-                color: $clr-primary;
-                font-size: 20px; 
-            }
-            h3 {
-                font-size: 5rem;
-                font-weight: 400;
-            }
-            h2 {
-                font-size: 6rem;
-                font-weight: 400;
-            }
-            a {
-                font-size: 2rem;
-                margin-top: 2rem;
-            }
-        }
-    }
-}
