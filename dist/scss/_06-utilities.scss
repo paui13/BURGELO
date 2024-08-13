@@ -1,0 +1,31 @@
+.btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border-radius: 5rem;
+    border: 1px solid transparent;
+    transition: 0.1s ease;
+    text-align: center;
+    &.bg--primary {
+        background: $clr-primary;
+        color: $clr-light;
+        font-size: 2rem;
+        &:hover {
+            background: $clr-dark;
+            color: $clr-primary;
+            transition: 0.5s ease;
+        }
+    }
+}
+.round {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: $clr-primary;
+    border-radius: 100px;
+    transition: 0.3s ease;
+    color: white;
+    &:hover {
+        background-color: $clr-dark;
+        color: $clr-primary;
+    }
+}
